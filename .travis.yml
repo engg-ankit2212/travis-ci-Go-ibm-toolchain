@@ -1,0 +1,73 @@
+language: go
+go_import_path: github.com/ethereum/go-ethereum
+#sudo: false
+jobs:
+  include:
+    # This builder only tests code linters on latest version of Go
+    - stage: lint
+      os: linux
+      dist: focal
+      arch: ppc64le
+      go: 1.15.x
+      env:
+        - lint
+      git:
+        submodules: false # avoid cloning ethereum/tests
+      script:
+        - go run hello_world.go lint
+    - stage: lint
+      os: linux
+      dist: focal
+      arch: amd64
+      go: 1.15.x
+      env:
+        - lint
+      #git:
+        #submodules: false # avoid cloning ethereum/tests
+      script:
+        - go run hello_world.go lint
+    - stage: lint
+      os: linux
+      dist: bionic
+      arch: ppc64le
+      go: 1.15.x
+      env:
+        - lint
+      git:
+        submodules: false # avoid cloning ethereum/tests
+      script:
+        - go run hello_world.go lint
+    - stage: lint
+      os: linux
+      dist: bionic
+      arch: amd64
+      go: 1.15.x
+      env:
+        - lint
+      #git:
+        #submodules: false # avoid cloning ethereum/tests
+      script:
+        - go run hello_world.go lint
+    - stage: lint
+      os: linux
+      dist: xenial
+      arch: ppc64le
+      go: 1.15.x
+      env:
+        - lint
+      git:
+        submodules: false # avoid cloning ethereum/tests
+      script:
+        - go run hello_world.go lint
+    - stage: lint
+      os: linux
+      dist: xenial
+      arch: amd64
+      go: 1.15.x
+      env:
+        - lint
+      #git:
+        #submodules: false # avoid cloning ethereum/tests
+      script:
+        - go run hello_world.go lint
+
