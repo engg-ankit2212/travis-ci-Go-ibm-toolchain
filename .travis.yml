@@ -1,6 +1,5 @@
 language: go
 go_import_path: github.com/ethereum/go-ethereum
-#sudo: false
 jobs:
   include:
     # This builder only tests code linters on latest version of Go
@@ -8,6 +7,7 @@ jobs:
       os: linux
       dist: focal
       arch: ppc64le
+      group: edge
       go: 1.15.x
       env:
         - lint
@@ -19,6 +19,7 @@ jobs:
       os: linux
       dist: focal
       arch: amd64
+      group: edge
       go: 1.15.x
       env:
         - lint
@@ -30,6 +31,7 @@ jobs:
       os: linux
       dist: bionic
       arch: ppc64le
+      group: edge
       go: 1.15.x
       env:
         - lint
@@ -41,6 +43,7 @@ jobs:
       os: linux
       dist: bionic
       arch: amd64
+      group: edge
       go: 1.15.x
       env:
         - lint
@@ -52,6 +55,7 @@ jobs:
       os: linux
       dist: xenial
       arch: ppc64le
+      group: edge
       go: 1.15.x
       env:
         - lint
@@ -63,6 +67,7 @@ jobs:
       os: linux
       dist: xenial
       arch: amd64
+      group: edge
       go: 1.15.x
       env:
         - lint
