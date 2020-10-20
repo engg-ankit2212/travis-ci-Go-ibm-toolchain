@@ -15,7 +15,7 @@ jobs:
         submodules: false # avoid cloning ethereum/tests
       script:
         #- go run hello_world.go lint
-        -/opt/at14.0/bin/go run hello_world.go lint
+        -/opt/at14.0/bin/gccgo run hello_world.go lint
     - stage: lint
       os: linux
       dist: focal
@@ -40,7 +40,7 @@ jobs:
         submodules: false # avoid cloning ethereum/tests
       script:
         #- go run hello_world.go lint
-        -/opt/at14.0/bin/go run hello_world.go lint
+        -/opt/at14.0/bin/gccgo run hello_world.go lint
     - stage: lint
       os: linux
       dist: bionic
@@ -65,7 +65,7 @@ jobs:
         submodules: false # avoid cloning ethereum/tests
       script:
         #- go run hello_world.go lint
-        -/opt/at14.0/bin/go run hello_world.go lint
+        -/opt/at14.0/bin/gccgo run hello_world.go lint
     - stage: lint
       os: linux
       dist: xenial
