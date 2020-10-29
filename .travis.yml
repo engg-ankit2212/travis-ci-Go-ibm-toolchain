@@ -19,18 +19,6 @@ jobs:
         - ./hello_world
     - stage: lint
       os: linux
-      dist: focal
-      arch: amd64
-      group: edge
-      go: 1.15.x
-      env:
-        - lint
-      #git:
-        #submodules: false # avoid cloning ethereum/tests
-      script:
-        - go run hello_world.go lint
-    - stage: lint
-      os: linux
       dist: bionic
       arch: ppc64le
       group: edge
@@ -45,18 +33,6 @@ jobs:
         - ./hello_world
     - stage: lint
       os: linux
-      dist: bionic
-      arch: amd64
-      group: edge
-      go: 1.15.x
-      env:
-        - lint
-      #git:
-        #submodules: false # avoid cloning ethereum/tests
-      script:
-        - go run hello_world.go lint
-    - stage: lint
-      os: linux
       dist: xenial
       arch: ppc64le
       group: edge
@@ -69,16 +45,4 @@ jobs:
         #- go run hello_world.go lint
         - /opt/at12.0/bin/gccgo hello_world.go -o hello_world
         - ./hello_world
-    - stage: lint
-      os: linux
-      dist: xenial
-      arch: amd64
-      group: edge
-      go: 1.15.x
-      env:
-        - lint
-      #git:
-        #submodules: false # avoid cloning ethereum/tests
-      script:
-        - go run hello_world.go lint
-
+        
