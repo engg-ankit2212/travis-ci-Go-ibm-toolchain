@@ -16,7 +16,7 @@ jobs:
       script:
         #- go run hello_world.go lint
         - /opt/at14.0/bin/gccgo hello_world.go -o hello_world
-        - go run hello_world.go lint
+        - ./hello_world
     - stage: lint
       os: linux
       dist: focal
@@ -42,7 +42,7 @@ jobs:
       script:
         #- go run hello_world.go lint
         - /opt/at14.0/bin/gccgo hello_world.go -o hello_world
-        - go run hello_world.go lint
+        - ./hello_world
     - stage: lint
       os: linux
       dist: bionic
@@ -68,7 +68,7 @@ jobs:
       script:
         #- go run hello_world.go lint
         - /opt/at12.0/bin/gccgo hello_world.go -o hello_world
-        - go run hello_world.go lint
+        - ./hello_world
     - stage: lint
       os: linux
       dist: xenial
